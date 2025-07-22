@@ -18,12 +18,12 @@ const Benefits = () => {
                             <img src={item.icon} alt={item.title} width={64} height={64}/>
                         </div>
                         {/* content */}
-                        <div className="">
+                        <div className="mb-4 text-center space-y-3.5">
                             <h4>{item.title}</h4>
                             <p>{item.text}</p>
                         </div>
                         {/* button */}
-                        <button>
+                        <button className="mt-auto ml-auto border border-blue-800 w-14 h-14 flex items-center justify-center rounded-md text-blue-100 transition-colors hover:bg-blue-200 hover:text-black">
                             <RiArrowRightUpLine size={26}/>
                         </button>
                     </div>
