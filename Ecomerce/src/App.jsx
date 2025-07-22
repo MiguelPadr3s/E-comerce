@@ -12,6 +12,7 @@ const App = () => {
         <Hero />
         <Benefits/>
         <Courses/>
+        
       </main>
     </>
   );
