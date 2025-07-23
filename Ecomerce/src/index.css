@@ -54,7 +54,7 @@
     @apply bg-blue-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800/90 transition-colors;
   }
   .secondary-btn {
-    @apply px-8 py-4 bg-blue-100 border border-white-95 rounded-md hover:bg-blue-500 transition-colors;
+    @apply px-8 py-4 bg-blue-100 border border-blue-800 rounded-md hover:bg-blue-500 transition-colors;
   }
   .play-btn {
     animation: 2s pulseAni ease infinite;
