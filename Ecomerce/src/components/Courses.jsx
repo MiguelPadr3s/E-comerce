@@ -17,7 +17,16 @@ const Courses = () => {
                                 <img src={item.img} alt={item.title} width={560} height={266} />
                             </div>
                             {/* Content */}
-                            <div className=""></div>
+                            <div className="">
+                                {/* tags */}
+                                <div className="">
+                                    {item.tags.map((tag,index) => (
+                                        <span className=""></span>
+                                    ))}
+                                </div>
+                                {/* meta data */}
+                                <div className=""></div>
+                            </div>
                             {/* btn */}
                             <button className=""></button>
                         </div>
