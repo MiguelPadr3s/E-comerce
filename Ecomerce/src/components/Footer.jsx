@@ -1,13 +1,17 @@
 import React from "react";
 import { contactInfo, footerLists, socialIcons } from "../constant/data";
 
+//motion
+import { motion } from "motion/react";
+import * as variants from "../motion/animation";
+
 const Footer = () => {
     return <footer className="pt-14 pb-8 bg-blue-200">
-        <div className="container">
+        <motion.div variants={variants.staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="container">
             {/* Footer top */}
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_0.7fr_0.7fr_0.7fr]">
                 {/* Footer brand */}
-                <div>
+                <motion.div variants={variants.fadeInUp}>
                     {/* Footer logo */}
                     <div>
                         <img 
@@ -26,10 +30,10 @@ const Footer = () => {
                             </a>
                         ))}
                     </div>
-                </div>
+                </motion.div>
                 {/* Footer list */}
                 {footerLists.map(item => (
-                    <div key={item.id} className="space-y-3">
+                    <motion.div variants={variants.fadeInUp} key={item.id} className="space-y-3">
                         <p className="text-lg font-semibold text-blue-800">{item.title}</p>
                         <ul className="space-y-2.5">
                             {item.links.map((link,index)=>(
@@ -38,10 +42,10 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 ))}
                 {/* Social profile */}
-                <div className="">
+                <motion.div variants={variants.fadeInUp}>
                     <p className="text-lg font-semibold text-blue-800">Social Profiles</p>
                     <div className="flex mt-5 gap-3">
                         {socialIcons.map(icon => (
@@ -50,13 +54,13 @@ const Footer = () => {
                             </button>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
             {/* Footer bottom */}
-            <p className="mt-16 text-center lg:mt-20">
+            <motion.p variants={variants.fadeInUp} className="mt-16 text-center lg:mt-20">
                 &copy; {new Date().getFullYear()}. Nexis Technology. All rights reserved.
-            </p>
-        </div>
+            </motion.p>
+        </motion.div>
     </footer>;
 };
 

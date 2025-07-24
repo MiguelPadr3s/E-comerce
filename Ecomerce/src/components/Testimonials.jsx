@@ -7,10 +7,14 @@ import {Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import { Navigation, Autoplay } from "swiper/modules";
 
+//motion
+import { motion } from "motion/react";
+import * as variants from "../motion/animation";
+
 const Testimonials = () => {
     return ( 
         <section className="section pt-14 pb-8 bg-blue-100">
-            <div className="container">
+            <motion.div variants={variants.staggerContainer} initial="hidden" whileInView="show" viewport={{once: true }} className="container">
                 {/* title */}
                 <Title 
                     title='Our Testimonials' 
@@ -18,6 +22,7 @@ const Testimonials = () => {
                     link='View All' 
                 />
                 {/* card wrapper */}
+                <motion.div variants={variants.fadeInUp}>
                 <Swiper 
                     modules={[Navigation, Autoplay]} 
                     spaceBetween={30} 
@@ -68,16 +73,17 @@ const Testimonials = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                </motion.div>
                 {/* Navigation btns */}
-                <div className="flex items-center justify-center mt-18 gap-5">
+                <motion.div variants={variants.fadeInUp} className="flex items-center justify-center mt-18 gap-5">
                     <button className="bg-blue-100 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-blue-300 transition-colors active:bg-blue-400 prev-btn">
                         <RiArrowLeftLine size={30} />
                     </button>
                     <button className="bg-blue-100 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-blue-300 transition-colors active:bg-blue-400 next-btn">
                         <RiArrowRightLine size={30} />
                     </button>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 };

@@ -1,28 +1,28 @@
 //stagger container animation
 export const staggerContainer = {
-    hidden:{},
-    show:{
-        transition: {
-            staggerChildren: 0.4,
-        },
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.8,
     },
+  },
 };
 
 
 //fade in animation
 export const fadeIn = {
-    hidden: {
-        opacity: 0,
-        filter: "blur(8px)",
+  hidden: {
+    opacity: 0,
+    filter: "blur(8px)",
+  },
+  show: {
+    opacity: 1,
+    filter: "blur(0)",
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
     },
-    show: {
-        opacity: 1,
-        filter: "blur(0)",
-        transition: {
-            duration: 0.7,
-            ease: "easeOut",
-        },
-    },
+  },
 };
 
 //fade in animation
