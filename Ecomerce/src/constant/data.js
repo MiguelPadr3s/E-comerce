@@ -228,17 +228,17 @@ export const contactInfo = [
   {
     id: 1,
     icon: RiPhoneFill,
-    label: "hello@skillbridge.com",
+    label: "+ 662 319 4847 ",
   },
   {
     id: 2,
     icon: RiMailSendFill,
-    label: "+91 91813 23 2309",
+    label: "info@nexistech.com.mx",
   },
   {
     id: 3,
     icon: RiUserLocationLine,
-    label: "Somewhere in the World",
+    label: "Esq. con Inglaterra, Los Sabinos 5, Bretaña, 83148 Hermosillo, Sonora, Mexico",
   },
 ];
 
