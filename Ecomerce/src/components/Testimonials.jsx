@@ -9,7 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 const Testimonials = () => {
     return ( 
-        <section className="section">
+        <section className="section pt-14 pb-8 bg-blue-100">
             <div className="container">
                 {/* title */}
                 <Title 
@@ -36,6 +36,11 @@ const Testimonials = () => {
                     navigation={{
                         prevEl:'.prev-btn',
                         nextEl:'.next-btn',
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        pauseOnMouseEnter:true,
+                        disableOnInteraction: false,
                     }}
                     className="mt-14 lg:mt-16"
                 >
